@@ -20,7 +20,6 @@ const hideLoadingSpinner = function () {
 const newQuote = function () {
   showLoadingSpinner();
   let quote = allQuotes[Math.floor(Math.random() * allQuotes.length)];
-  console.log(quote);
   if (!quote.author) {
     quoteAuthor.textContent = "Unknown";
   } else {
@@ -43,7 +42,6 @@ const getQuoteFromAPI = async function () {
   try {
     const response = await fetch(apiUrl);
     allQuotes = await response.json();
-    console.log(allQuotes);
     newQuote();
   } catch (err) {
     console.log(err);

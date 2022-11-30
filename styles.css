@@ -16,12 +16,14 @@ body {
   font-family: "Noto Sans HK", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  position: absolute;
-  transform: translateY(20rem);
+  position: relative;
+  top: 35rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
 .container {
   border: 2px solid grey;
@@ -76,6 +78,11 @@ button:active {
   height: 120px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
+
+  position: relative;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
 }
 @keyframes spin {
   0% {
@@ -108,5 +115,13 @@ button:active {
   }
   .twitter-button {
     font-size: 1.5rem;
+  }
+  .loader {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
